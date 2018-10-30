@@ -23,7 +23,7 @@ from core.views import registro
 from core.views import tabelas
 
 
-#urls
+#urlS
 
 urlpatterns = [
     path('admin/', admin.site.urls),
