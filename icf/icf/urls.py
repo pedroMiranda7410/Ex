@@ -16,8 +16,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.views import home
+from core.views import charts
+from core.views import forms
+from core.views import login
+from core.views import registro
+from core.views import tabelas
+
+
+#urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path("", home, name ="home"),
+    path("", home, name ="home"),
+    path("charts/", charts, name ="charts"),
+    path("forms/", forms, name ="forms"),
+    path("login/", login, name ="login"),
+    path("registro/", registro, name = "registro"),
+    path("tabelas/", tabelas, name = "tabelas"),
+
+
 ]
