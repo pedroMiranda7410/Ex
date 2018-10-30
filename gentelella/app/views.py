@@ -5,8 +5,9 @@ from django.http import HttpResponse
 
 def index(request):
     context = {}
-    template = loader.get_template('app/index.html')
-    return HttpResponse(template.render(context, request))
+    return render(request,'app/index.html',context)
+    #template = loader.get_template('app/index.html')
+    #return HttpResponse(template.render(context, request))
 
 
 def gentella_html(request):
@@ -18,4 +19,3 @@ def gentella_html(request):
     load_template = request.path.split('/')[-1]
     template = loader.get_template('app/' + load_template)
     return HttpResponse(template.render(context, request))
-
